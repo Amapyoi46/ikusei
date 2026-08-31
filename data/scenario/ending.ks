@@ -2,6 +2,10 @@
 
 *saisyo
 
+[tb_start_tyrano_code]
+[freeimage layer=0]
+[_tb_end_tyrano_code]
+
 [chara_hide_all  time="1"  wait="true"  ]
 [tb_hide_message_window  ]
 [cm  ]

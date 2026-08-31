@@ -3,6 +3,10 @@
 *saisyo
 
 [chara_hide  name="theo"  time="1"  wait="true"  pos_mode="true"  ]
+[tb_start_tyrano_code]
+[freeimage layer=0]
+[_tb_end_tyrano_code]
+
 [cm  ]
 [bg  time="0"  method="crossfade"  storage="haikei.png"  ]
 [chara_show  name="theo"  time="1000"  wait="true"  storage="chara/1/tozi.png"  width="373"  height="483"  left="270"  top="4"  reflect="false"  ]
