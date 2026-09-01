@@ -2,9 +2,13 @@
 
 *saisyo
 
+[tb_image_hide  time="1"  ]
 [chara_hide  name="theo"  time="1"  wait="true"  pos_mode="true"  ]
 [tb_start_tyrano_code]
-[freeimage layer=0]
+[freeimage layer="0"]
+[freeimage layer="1"]
+[freeimage layer="2"]
+[freeimage layer="3"]
 [_tb_end_tyrano_code]
 
 [cm  ]

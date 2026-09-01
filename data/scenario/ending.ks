@@ -3,10 +3,14 @@
 *saisyo
 
 [tb_start_tyrano_code]
-[freeimage layer=0]
+[freeimage layer="0"]
+[freeimage layer="1"]
+[freeimage layer="2"]
+[freeimage layer="3"]
 [_tb_end_tyrano_code]
 
 [chara_hide_all  time="1"  wait="true"  ]
+[tb_image_hide  time="1"  ]
 [tb_hide_message_window  ]
 [cm  ]
 [bg  time="1"  method="crossfade"  storage="haikei.png"  ]

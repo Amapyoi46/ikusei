@@ -5,12 +5,18 @@
 [tb_hide_message_window  ]
 [bg  time="300"  method="crossfade"  storage="haikei.png"  ]
 [cm  ]
-[chara_show  name="theo"  time="0"  wait="true"  storage="chara/1/tuzyou.png"  width="373"  height="483"  left="62"  top="-9"  reflect="false"  ]
+[tb_start_tyrano_code]
+[layopt layer="3" visible=true]
+[image storage="default/tuzyou-kao.png" layer="0" page="fore" x="62" y="-9" width="373"]
+[image storage="default/itumono.png" layer="3" page="fore" x="62" y="-9" width="373"]
+[_tb_end_tyrano_code]
+
 *hazime
 
 [glink  color="black"  storage="ikusei.ks"  size="27"  x="573"  y="155"  width=""  height=""  text="種(火を)付(与)"  _clickable_img=""  target="*huyo"  ]
 [glink  color="black"  storage="ikusei.ks"  size="27"  text="勉強する"  x="603"  y="235"  width=""  height=""  _clickable_img=""  target="*benkyo"  ]
 [glink  color="black"  storage="ikusei.ks"  size="27"  text="かわいくなる"  x="580"  y="314"  width=""  height=""  _clickable_img=""  target="*kawaiku"  ]
+[glink  color="white"  storage="ikusei.ks"  size="20"  text="着せ替え"  x="378"  y="380"  width=""  height=""  _clickable_img=""  target="*kisekae"  ]
 [clickable  storage="ikusei.ks"  x="62"  y="-9"  width="373"  height="483"  target="*touch"  _clickable_img=""  ]
 [tb_ptext_show  x="645.0000152587891"  y="65"  size="35"  color="0x0a0505"  time="0"  text="&'Week'+f.week"  anim="false"  face="undefined"  edge="undefined"  shadow="undefined"  ]
 [tb_ptext_show  x="142"  y="484.00001525878906"  size="30"  color="0x000000"  time="0"  text="&'強さ：'+f.tuyosa"  anim="false"  face="undefined"  edge="undefined"  shadow="undefined"  ]
@@ -53,7 +59,6 @@
 [_tb_end_text]
 
 [tb_eval  exp="f.kawaisa+=10"  name="kawaisa"  cmd="+="  op="t"  val="10"  val_2="undefined"  ]
-[tb_hide_message_window  ]
 [tb_eval  exp="f.week+=1"  name="week"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
 [tb_ptext_hide  time="1"  ]
 [jump  storage="ikusei.ks"  target="*tugi"  ]
@@ -68,7 +73,7 @@
 [elsif exp="talk == 1"]
 茶でも淹れてあげようか。
 [else]
-[image storage="chara/1/tere.png" layer="0" page="fore" x="62" y="-9" width="373"]
+[image storage="default/tere-kao.png" layer="0" page="fore" x="62" y="-9" width="373"]
 ……そんなにまじまじと見るな、馬鹿。
 [endif]
 
@@ -79,7 +84,7 @@
 [elsif exp="talk == 1"]
 ……ぼくなんかと話しても楽しくないだろ。
 [else]
-[image storage="chara/1/tozi.png" layer="0" page="fore" x="62" y="-9" width="373"]
+[image storage="default/tozi2-kao.png" layer="0" page="fore" x="62" y="-9" width="373"]
 ふぁ……失礼。
 [endif]
 
@@ -94,17 +99,17 @@
 [elsif exp="talk == 1"]
 暇なのか？
 [elsif exp="talk == 2"]
-[image storage="chara/1/ikari.png" layer="0" page="fore" x="62" y="-9" width="373"]
+[image storage="default/ikari-kao.png" layer="0" page="fore" x="62" y="-9" width="373"]
 触るな。
 [elsif exp="talk == 3"]
 誰だおまえ。
 [else]
-[image storage="chara/1/tozi.png" layer="0" page="fore" x="62" y="-9" width="373"]
+[image storage="default/tozi-kao.png" layer="0" page="fore" x="62" y="-9" width="373"]
 ふん。
 [endif]
 [endif]
 [wait time="500"]
-[image storage="chara/1/tuzyou.png" layer="0" page="fore" x="62" y="-9" width="373"]
+[image storage="default/tuzyou-kao.png" layer="0" page="fore" x="62" y="-9" width="373"]
 [_tb_end_tyrano_code]
 
 [tb_hide_message_window  ]
@@ -115,4 +120,109 @@
 [jump  storage="scene3.ks"  target="*saisyo"  cond="f.week==7"  ]
 [jump  storage="scene4.ks"  target="*saisyo"  cond="f.week==11"  ]
 [jump  storage="ending.ks"  target=""  cond="f.week==13"  ]
+[jump  storage="ikusei.ks"  target="*hazime"  ]
+*kisekae
+
+[glink  color="white"  storage="ikusei.ks"  size="20"  text="いつもの服"  x="508"  y="66"  width=""  height=""  _clickable_img=""  target="*itumono"  ]
+[glink  color="white"  storage="ikusei.ks"  size="20"  text="メイド服"  x="508"  y="138"  width=""  height=""  _clickable_img=""  target="*maid"  ]
+[glink  color="white"  storage="ikusei.ks"  size="20"  text="セーラー服"  x="508"  y="212"  width=""  height=""  _clickable_img=""  target="*sera"  ]
+[glink  color="white"  storage="ikusei.ks"  size="20"  text="園児服"  x="508"  y="289"  width=""  height=""  _clickable_img=""  target="*enzi"  ]
+[glink  color="white"  storage="ikusei.ks"  size="20"  text="ねこ耳"  x="751"  y="65"  width=""  height=""  _clickable_img=""  target="*neko"  ]
+[glink  color="white"  storage="ikusei.ks"  size="20"  text="おしゃぶり"  x="733"  y="138"  width=""  height=""  _clickable_img=""  target="*oshaburi"  ]
+[glink  color="white"  storage="ikusei.ks"  size="15"  text="戻る"  x="822"  y="304"  width=""  height=""  _clickable_img=""  target="*modoru"  ]
+[glink  color="white"  storage="ikusei.ks"  size="13"  text="アクセサリーを外す"  x="746"  y="255"  width=""  height=""  _clickable_img=""  target="*hazusu"  ]
+[tb_show_message_window  ]
+[tb_start_text mode=4 ]
+何を着せるんだ？
+
+[_tb_end_text]
+
+[s  ]
+*itumono
+
+[tb_start_tyrano_code]
+[freeimage layer="3"]
+[image storage="default/itumono.png" layer="3" page="fore" x="62" y="-9" width="373"]
+[_tb_end_tyrano_code]
+
+[tb_start_text mode=1 ]
+やっぱりこれが一番落ち着く。[p]
+[_tb_end_text]
+
+[jump  storage="ikusei.ks"  target="*kisekae"  ]
+*maid
+
+[tb_start_tyrano_code]
+[freeimage layer="3"]
+[image storage="default/maid.png" layer="3" page="fore" x="62" y="-9" width="373"]
+[image storage="default/ikari-kao.png" layer="0" page="fore" x="62" y="-9" width="373"]
+[_tb_end_tyrano_code]
+
+[tb_start_text mode=1 ]
+サーヴァントって、そういうことじゃないだろ。[p]
+[_tb_end_text]
+
+[jump  storage="ikusei.ks"  target="*kisekae"  ]
+*sera
+
+[tb_start_tyrano_code]
+[freeimage layer="3"]
+[image storage="default/sera.png" layer="3" page="fore" x="62" y="-9" width="373"]
+[_tb_end_tyrano_code]
+
+[tb_start_text mode=1 ]
+ふん。まあ悪くない。[p]
+[_tb_end_text]
+
+[jump  storage="ikusei.ks"  target="*kisekae"  ]
+*enzi
+
+[tb_start_tyrano_code]
+[freeimage layer="3"]
+[image storage="default/enzi.png" layer="3" page="fore" x="62" y="-9" width="373"]
+[image storage="default/ikari-kao.png" layer="0" page="fore" x="62" y="-9" width="373"]
+[_tb_end_tyrano_code]
+
+[tb_start_text mode=1 ]
+……ふざけてるのか？[p]
+[_tb_end_text]
+
+[jump  storage="ikusei.ks"  target="*kisekae"  ]
+*neko
+
+[tb_image_hide  time="1"  ]
+[tb_image_show  time="1"  storage="default/neko.png"  width="373"  height="483"  x="62"  y="-9"  ]
+[tb_start_tyrano_code]
+[image storage="default/ikari-kao.png" layer="0" page="fore" x="62" y="-9" width="373"]
+[_tb_end_tyrano_code]
+
+[tb_start_text mode=1 ]
+にゃー……なんて、言うわけないだろう。[p]
+[_tb_end_text]
+
+[tb_start_tyrano_code]
+[image storage="default/tuzyou-kao.png" layer="0" page="fore" x="62" y="-9" width="373"]
+[_tb_end_tyrano_code]
+
+[jump  storage="ikusei.ks"  target="*kisekae"  ]
+*oshaburi
+
+[tb_image_hide  time="1"  ]
+[tb_image_show  time="1"  storage="default/osyaburi.png"  width="373"  height="483"  x="63"  y="-9"  ]
+[tb_start_tyrano_code]
+[image storage="default/ikari-kao.png" layer="0" page="fore" x="62" y="-9" width="373"]
+[_tb_end_tyrano_code]
+
+[tb_start_text mode=1 ]
+……むー……[p]
+[_tb_end_text]
+
+[jump  storage="ikusei.ks"  target="*kisekae"  ]
+*hazusu
+
+[tb_image_hide  time="1"  ]
+[jump  storage="ikusei.ks"  target="*kisekae"  ]
+*modoru
+
+[tb_hide_message_window  ]
 [jump  storage="ikusei.ks"  target="*hazime"  ]
