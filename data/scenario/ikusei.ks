@@ -61,6 +61,7 @@
 [tb_eval  exp="f.kawaisa+=10"  name="kawaisa"  cmd="+="  op="t"  val="10"  val_2="undefined"  ]
 [tb_eval  exp="f.week+=1"  name="week"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
 [tb_ptext_hide  time="1"  ]
+[tb_hide_message_window  ]
 [jump  storage="ikusei.ks"  target="*tugi"  ]
 *touch
 
