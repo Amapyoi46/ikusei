@@ -1,6 +1,11 @@
 [_tb_system_call storage=system/_scene1.ks]
 
 [cm  ]
+[tb_eval  exp="f.week=1"  name="week"  cmd="="  op="t"  val="1"  val_2="undefined"  ]
+[tb_eval  exp="f.tuyosa=5"  name="tuyosa"  cmd="="  op="t"  val="5"  val_2="undefined"  ]
+[tb_eval  exp="f.kasikosa=20"  name="kasikosa"  cmd="="  op="t"  val="20"  val_2="undefined"  ]
+[tb_eval  exp="f.kawaisa=15"  name="kawaisa"  cmd="="  op="t"  val="15"  val_2="undefined"  ]
+[tb_eval  exp="f.koukann=0"  name="koukann"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
 [bg  storage="haikei.png"  time="0"  ]
 [tb_show_message_window  ]
 [chara_show  name="aporon"  time="1000"  wait="true"  storage="chara/2/hituzi.png"  width="373"  height="483"  left="542"  top="-10"  reflect="false"  ]
